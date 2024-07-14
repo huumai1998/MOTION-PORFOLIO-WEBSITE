@@ -1,5 +1,5 @@
 import { useLayoutEffect, useRef } from "react";
-import camera from "../assets/Camera-Lens-PNG-Free-Download.png";
+import camera from "../assets/camera-lens-clipart-design-illustration-free-png.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { About } from "./about";
