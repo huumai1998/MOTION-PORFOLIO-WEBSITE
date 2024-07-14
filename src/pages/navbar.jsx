@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { FiMenu } from "react-icons/fi";
 // import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
+import { HashLink as Link } from "react-router-hash-link";
 
 export const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -32,19 +33,19 @@ export const Navbar = () => {
       <div className="w-full h-14 md:h-14">
         <div className="max-w-screen-2xl h-full mx-auto px-[10em] flex items-center justify-between">
           <div className="hidden lg:inline-flex left-0 gap-20 uppercase text-sm font-semibold">
-            <a href="/">Home</a>
+            <Link to="#">Home</Link>
           </div>
           <div className="hidden lg:inline-flex left-0 gap-20 uppercase text-sm font-semibold">
-            <a href="about">About</a>
+            <Link to="#about">About</Link>
           </div>
-          <a
-            href="/"
+          <Link
+            to="#"
             className={`uppercase font-bold transition duration-350 ease-out scroll-smooth ${
-              scrolling ? "text-[1.52rem]" : "text-[1.5rem]"
+              scrolling ? "text-[1.62rem]" : "text-[1.5rem]"
             }`}
           >
             DT
-          </a>
+          </Link>
           <div className="hidden lg:inline-flex left-0 gap-20 uppercase text-sm font-semibold">
             <a href="/">Service</a>
           </div>

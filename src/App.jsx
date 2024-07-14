@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { About, Home, Loading, Navbar, TypeWriter } from "./pages";
+import { Loading, Main, Navbar, TypeWriter } from "./pages";
 import loading from "./svg/loading.json";
 import {
   BrowserRouter as Router,
@@ -28,8 +28,7 @@ function App() {
           <Router>
             <Navbar />
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
+              <Route path="/" element={<Main />} />
               <Route path="*" element={<Navigate to="/" />} />
             </Routes>
           </Router>

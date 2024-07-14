@@ -3,6 +3,7 @@ import camera from "../assets/camera-lens-clipart-design-illustration-free-png.p
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { About } from "./about";
+import { TypeWriter } from "./typeWriter";
 
 gsap.registerPlugin(ScrollTrigger);
 export const Home = () => {
@@ -63,21 +64,30 @@ export const Home = () => {
               src={camera}
               height={650}
               width={650}
-              className="image "
+              className="image"
             />
             <div className="absolute flex text-white flex-col items-center justify-center">
-              <h1 ref={text1} className="text-[170px]">
-                <p>Duy Truong</p>
+              <h1
+                ref={text1}
+                className="text-[80px] lg:text-[170px] md:text-[120px]"
+              >
+                <p>
+                  <TypeWriter string={"Duy Truong"} typeSpeed={40} />
+                </p>
               </h1>
               <p
                 ref={text2}
                 className="opacity-50 w-48 text-[13px] text-center"
               >
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                <TypeWriter
+                  string={`Lorem ipsum, dolor sit amet consectetur adipisicing elit.`}
+                  typeSpeed={20}
+                />
+                <p>cas</p>
               </p>
             </div>
           </div>
-          <div ref={container} className="container h-screen last" id="#about">
+          <div ref={container} className="container h-screen last" id="about">
             <About />
           </div>
         </section>
