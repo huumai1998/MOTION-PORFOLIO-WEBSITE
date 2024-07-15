@@ -8,6 +8,7 @@ import portrait from "../assets/portrait.jpg";
 import { Slide } from "react-awesome-reveal";
 import test from "../assets/test.jpg";
 import title6 from "../assets/title6.jpg";
+import { Contact } from "./contact";
 
 export const Service = () => {
   return (
@@ -21,6 +22,7 @@ export const Service = () => {
         </Slide>
       </div>
       <HorizontalScrollCarousel />
+      <Contact />
     </div>
   );
 };

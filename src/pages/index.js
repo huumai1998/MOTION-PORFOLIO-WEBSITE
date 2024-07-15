@@ -5,3 +5,4 @@ export * from "./typeWriter";
 export * from "./navbar";
 export * from "./main";
 export * from "./service";
+export * from "./Footer";
