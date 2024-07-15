@@ -59,7 +59,7 @@ export const Navbar = () => {
           <div className="hidden lg:inline-flex left-0 gap-20 uppercase text-sm font-semibold">
             <a href="/">Contact</a>
           </div>
-          <div className="lg:hidden">
+          <div className="lg:hidden px-10">
             {!open ? (
               <>
                 <FiMenu
