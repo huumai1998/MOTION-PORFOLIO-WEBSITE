@@ -24,7 +24,7 @@ export const About = () => {
         </Slide>
         <div className="mt-20">
           <span className="about-title text-[50px] md:text-[90px]">
-            <Fade cascade damping={1}>
+            <Fade damping={3500}>
               <h1>Duy Truong</h1>
             </Fade>
           </span>

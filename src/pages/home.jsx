@@ -9,6 +9,7 @@ import { FiInstagram } from "react-icons/fi";
 import { FcGoogle } from "react-icons/fc";
 import { FaPhoneFlip } from "react-icons/fa6";
 import { Slide } from "react-awesome-reveal";
+import { Service } from "./service";
 
 gsap.registerPlugin(ScrollTrigger);
 export const Home = () => {
@@ -22,6 +23,7 @@ export const Home = () => {
   const icon3 = useRef(null);
   const icon4 = useRef(null);
   const container = useRef(null);
+  const container1 = useRef(null);
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -37,6 +39,7 @@ export const Home = () => {
       gsap.set(container.current, {
         marginTop: -container.current.offsetHeight,
       });
+
       gsap
         .timeline({
           scrollTrigger: {
@@ -55,6 +58,11 @@ export const Home = () => {
         .to(icon4.current, { y: -800 }, 0.12, "<")
         .fromTo(
           container.current,
+          { yPercent: 100, scaleY: 2 },
+          { yPercent: 0, scaleY: 1 }
+        )
+        .fromTo(
+          container1.current,
           { yPercent: 100, scaleY: 2 },
           { yPercent: 0, scaleY: 1 }
         );
@@ -151,8 +159,15 @@ export const Home = () => {
               </div>
             </div>
           </div>
-          <div ref={container} className="container h-screen last" id="about">
+          <div ref={container} className="container h-screen" id="about">
             <About />
+          </div>
+          <div
+            ref={container1}
+            className="container h-screen last"
+            id="service"
+          >
+            <Service />
           </div>
         </section>
       </div>

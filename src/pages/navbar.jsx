@@ -33,13 +33,18 @@ export const Navbar = () => {
       <div className="w-full h-14 md:h-14">
         <div className="max-w-screen-2xl h-full mx-auto px-[10em] flex items-center justify-between">
           <div className="hidden lg:inline-flex left-0 gap-20 uppercase text-sm font-semibold">
-            <Link to="#">Home</Link>
+            <Link to="#" smooth>
+              Home
+            </Link>
           </div>
           <div className="hidden lg:inline-flex left-0 gap-20 uppercase text-sm font-semibold">
-            <Link to="#about">About</Link>
+            <Link to="#about" smooth>
+              About
+            </Link>
           </div>
           <Link
             to="#"
+            smooth
             className={`uppercase cus-title font-bold transition duration-350 ease-out scroll-smooth ${
               scrolling ? "text-[1.62rem]" : "text-[1.5rem]"
             }`}
@@ -47,7 +52,9 @@ export const Navbar = () => {
             DT
           </Link>
           <div className="hidden lg:inline-flex left-0 gap-20 uppercase text-sm font-semibold">
-            <a href="/">Service</a>
+            <Link to="#service" smooth>
+              Service
+            </Link>
           </div>
           <div className="hidden lg:inline-flex left-0 gap-20 uppercase text-sm font-semibold">
             <a href="/">Contact</a>
