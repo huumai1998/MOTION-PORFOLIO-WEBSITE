@@ -23,8 +23,8 @@ export const About = () => {
               reprehenderit!
             </p>
           </Slide>
-          <div className="mt-20">
-            <span className="about-title text-[50px] md:text-[90px]">
+          <div className="mt-10">
+            <span className="about-title text-[45px] md:text-[70px]">
               <Slide direction="right">
                 <h1>Duy Truong</h1>
               </Slide>
