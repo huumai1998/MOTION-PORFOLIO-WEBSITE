@@ -40,7 +40,7 @@ export const Navbar = () => {
           </div>
           <Link
             to="#"
-            className={`uppercase font-bold transition duration-350 ease-out scroll-smooth ${
+            className={`uppercase cus-title font-bold transition duration-350 ease-out scroll-smooth ${
               scrolling ? "text-[1.62rem]" : "text-[1.5rem]"
             }`}
           >

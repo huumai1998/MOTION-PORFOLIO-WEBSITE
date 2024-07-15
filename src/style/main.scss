@@ -2,8 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&family=Sacramento&display=swap");
+
+// .sacramento-regular {
+//   font-family: "Sacramento", cursive;
+//   font-weight: 400;
+//   font-style: normal;
+// }
+
+// .allura-regular {
+//   font-family: "Allura", cursive;
+//   font-weight: 400;
+//   font-style: normal;
+// }
+
 body {
   overflow-x: hidden;
+  font-family: "Playfair Display", serif;
+}
+
+.cus-title {
+  font-family: "Playwrite BE VLG", cursive;
 }
 
 @layer components {

@@ -82,11 +82,11 @@ export const Home = () => {
             <div className="absolute flex text-white flex-col items-center justify-center">
               <h1
                 ref={text1}
-                className="text-[80px] lg:text-[170px] md:text-[120px]"
+                className="text-[70px] lg:text-[150px] md:text-[110px]"
               >
-                <p>
+                <span className="cus-title">
                   <TypeWriter string={"Duy Truong"} typeSpeed={40} />
-                </p>
+                </span>
               </h1>
               <p
                 ref={text2}
