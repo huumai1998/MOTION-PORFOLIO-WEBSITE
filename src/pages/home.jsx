@@ -4,6 +4,10 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { About } from "./about";
 import { TypeWriter } from "./typeWriter";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FiInstagram } from "react-icons/fi";
+import { FcGoogle } from "react-icons/fc";
+import { FaPhoneFlip } from "react-icons/fa6";
 
 gsap.registerPlugin(ScrollTrigger);
 export const Home = () => {
@@ -12,7 +16,12 @@ export const Home = () => {
   const img = useRef(null);
   const text1 = useRef(null);
   const text2 = useRef(null);
+  const icon1 = useRef(null);
+  const icon2 = useRef(null);
+  const icon3 = useRef(null);
+  const icon4 = useRef(null);
   const container = useRef(null);
+
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       ScrollTrigger.create({
@@ -39,6 +48,10 @@ export const Home = () => {
         .to(img.current, { transform: "translateZ(2200px)" })
         .to(text1.current, { y: -800 }, 0.05, "<")
         .to(text2.current, { y: -800 }, 0.08, "<")
+        .to(icon1.current, { y: -800 }, 0.09, "<")
+        .to(icon2.current, { y: -800 }, 0.1, "<")
+        .to(icon3.current, { y: -800 }, 0.11, "<")
+        .to(icon4.current, { y: -800 }, 0.12, "<")
         .fromTo(
           container.current,
           { yPercent: 100, scaleY: 2 },
@@ -77,14 +90,50 @@ export const Home = () => {
               </h1>
               <p
                 ref={text2}
-                className="opacity-50 w-48 text-[13px] text-center"
+                className="opacity-80 w-90 text-[15px] text-center"
               >
                 <TypeWriter
                   string={`Lorem ipsum, dolor sit amet consectetur adipisicing elit.`}
                   typeSpeed={20}
                 />
-                <p>cas</p>
               </p>
+              <div className="inline-flex gap-3">
+                <div ref={icon1} className="pt-5 rounded-full cursor-pointer">
+                  <FaFacebookSquare
+                    size={30}
+                    className=""
+                    color="#0165E1"
+                    onClick={() => {
+                      window.open("https://www.facebook.com/");
+                    }}
+                  />
+                </div>
+                <div ref={icon2} className="pt-5 rounded-full cursor-pointer">
+                  <FiInstagram
+                    size={30}
+                    className=""
+                    color="pink"
+                    onClick={() => {
+                      window.open("https://www.instagram.com/");
+                    }}
+                  />
+                </div>
+                <div ref={icon3} className="pt-5 rounded-full cursor-pointer">
+                  <FcGoogle
+                    size={30}
+                    className=""
+                    onClick={() => {
+                      window.open("mailto:huumai0918@gmail.com");
+                    }}
+                  />
+                </div>
+                <div ref={icon4} className="pt-5 rounded-full cursor-pointer">
+                  <FaPhoneFlip
+                    size={30}
+                    onClick={() => window.open("tel:4039737318")}
+                  />
+                </div>
+              </div>
             </div>
           </div>
           <div ref={container} className="container h-screen last" id="about">
