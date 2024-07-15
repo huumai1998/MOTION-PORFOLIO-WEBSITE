@@ -8,6 +8,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FiInstagram } from "react-icons/fi";
 import { FcGoogle } from "react-icons/fc";
 import { FaPhoneFlip } from "react-icons/fa6";
+import { Slide } from "react-awesome-reveal";
 
 gsap.registerPlugin(ScrollTrigger);
 export const Home = () => {
@@ -85,53 +86,67 @@ export const Home = () => {
                 className="text-[70px] lg:text-[150px] md:text-[110px]"
               >
                 <span className="cus-title">
-                  <TypeWriter string={"Duy Truong"} typeSpeed={40} />
+                  <Slide direction="left">
+                    <TypeWriter string={"Duy Truong"} typeSpeed={60} />
+                  </Slide>
                 </span>
               </h1>
               <p
                 ref={text2}
                 className="opacity-80 w-90 text-[15px] text-center"
               >
-                <TypeWriter
-                  string={`Lorem ipsum, dolor sit amet consectetur adipisicing elit.`}
-                  typeSpeed={20}
-                />
-              </p>
+                <Slide direction="right">
+                  {" "}
+                  <TypeWriter
+                    string={`Lorem ipsum, dolor sit amet consectetur adipisicing elit.`}
+                    typeSpeed={20}
+                  />
+                </Slide>
+              </p>{" "}
               <div className="inline-flex gap-3">
                 <div ref={icon1} className="pt-5 rounded-full cursor-pointer">
-                  <FaFacebookSquare
-                    size={30}
-                    className=""
-                    color="#0165E1"
-                    onClick={() => {
-                      window.open("https://www.facebook.com/");
-                    }}
-                  />
+                  {" "}
+                  <Slide direction="right">
+                    <FaFacebookSquare
+                      size={30}
+                      className=""
+                      color="#0165E1"
+                      onClick={() => {
+                        window.open("https://www.facebook.com/");
+                      }}
+                    />
+                  </Slide>
                 </div>
                 <div ref={icon2} className="pt-5 rounded-full cursor-pointer">
-                  <FiInstagram
-                    size={30}
-                    className=""
-                    color="pink"
-                    onClick={() => {
-                      window.open("https://www.instagram.com/");
-                    }}
-                  />
+                  <Slide direction="right">
+                    <FiInstagram
+                      size={30}
+                      className=""
+                      color="pink"
+                      onClick={() => {
+                        window.open("https://www.instagram.com/");
+                      }}
+                    />
+                  </Slide>
                 </div>
                 <div ref={icon3} className="pt-5 rounded-full cursor-pointer">
-                  <FcGoogle
-                    size={30}
-                    className=""
-                    onClick={() => {
-                      window.open("mailto:huumai0918@gmail.com");
-                    }}
-                  />
+                  <Slide direction="left">
+                    <FcGoogle
+                      size={30}
+                      className=""
+                      onClick={() => {
+                        window.open("mailto:huumai0918@gmail.com");
+                      }}
+                    />
+                  </Slide>
                 </div>
                 <div ref={icon4} className="pt-5 rounded-full cursor-pointer">
-                  <FaPhoneFlip
-                    size={30}
-                    onClick={() => window.open("tel:4039737318")}
-                  />
+                  <Slide direction="left">
+                    <FaPhoneFlip
+                      size={30}
+                      onClick={() => window.open("tel:4039737318")}
+                    />
+                  </Slide>
                 </div>
               </div>
             </div>
