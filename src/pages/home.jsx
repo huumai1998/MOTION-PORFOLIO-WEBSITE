@@ -95,7 +95,7 @@ export const Home = () => {
               >
                 <span className="cus-title">
                   <Slide direction="down">
-                    <TypeWriter string={"Duy Truong"} typeSpeed={60} />
+                    <TypeWriter string={"Name Here"} typeSpeed={60} />
                   </Slide>
                 </span>
               </h1>
