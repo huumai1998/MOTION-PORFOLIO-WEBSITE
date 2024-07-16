@@ -26,7 +26,7 @@ export const About = () => {
           <div className="mt-10">
             <span className="about-title text-[45px] md:text-[70px]">
               <Slide direction="right">
-                <h1>Duy Truong</h1>
+                <h1>SomeOne</h1>
               </Slide>
             </span>
           </div>
